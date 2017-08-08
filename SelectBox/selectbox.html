@@ -1,0 +1,27 @@
+<div class="select-box input-margin">
+    <div class="dropdown-container">
+        <div class="multi-dropdown-header-container ellipsis" ng-click="showList()" ng-class="errorOccuered ? 'error-border':''" title={{placeholder}}>
+            <input id="multiSearch" type="text" ng-model="searchString" ng-model-options="{ debounce: 500 }" placeholder="{{placeholder}} *">
+            <div class="sme-circular-loader clearfix" ng-if="loadingData"></div>
+        </div>
+        <div class="dropdown-list-container infinite-scroll" ng-hide="hideList">
+            <ul class="list-box">
+                <li ng-repeat="item in dropList track by $index" ng-click="handleClick(item)">
+                    <span class="success-tooltip-icon" ng-if="item.selected"></span>
+                    {{item.itemValue}}
+                </li>
+            </ul>
+        </div>
+        <div ng-if="errorOccuered" class="error-state">Please select a valid value</div>
+        <div class="tab-wrapper">
+            <div class="tab" ng-repeat="item in selectedItems track by $index">
+                <span class="item-tab">{{item.itemValue}}</span>
+                <span class="unselect-button" ng-click="unselectItem(item)">x</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
