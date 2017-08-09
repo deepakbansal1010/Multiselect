@@ -1,0 +1,23 @@
+display-attr: 		The object attribute that needs to be displayed
+selected-items: 		Items that are selected (Should be a subset of all-items)
+all-items: 			All the items that will be part of the dropdown
+add-item:		 	A call-back function when clicking on an unselected item
+remove-item:	 	A call-back function when clicking on an selected item
+
+multi: 				Select multiple options (bool)
+maxItemSelected:	Maximum selected options (int)
+autoLoad:			automatically loads data (bool) 
+
+pagination:			enable/disable paginantion(bool)
+pageSize: 			(int)
+infiniteScroll:		enable/disable infinite scroll (bool)
+caching: 				enable/disable caching (bool)
+
+apiURL:				api url(string)
+placeholder: 		placeholder text (string)
+
+error:					show/hide error msg (bool)
+errorMsg:			error text (string)
+
+searchable: 			enable/disable searching (bool)
+minQueryLength:	length to trigger search (int)
